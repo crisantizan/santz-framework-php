@@ -1,0 +1,37 @@
+{
+  "name": "framework/santz",
+  "version": "1.0.0",
+  "description": "Framework PHP y JS (TypeScript)",
+  "main": "bundle.js",
+  "scripts": {
+    "watch":"watchify ./public/typescript/output/src/main.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisantiz/santz.git"
+  },
+  "keywords": [
+    "Framework",
+    "Framework",
+    "PHP",
+    "JS",
+    "javascript",
+    "TS",
+    "typescript"
+  ],
+  "author": "chrisantiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisantiz/santz/issues"
+  },
+  "homepage": "https://github.com/chrisantiz/santz#readme",
+  "dependencies": {
+    "@types/jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.1.1",
+    "typescript": "^2.7.2",
+    "uglifyjs": "^2.4.11",
+    "watchify": "^3.11.0"
+  }
+}

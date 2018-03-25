@@ -1,0 +1,24 @@
+{
+    "name": "framework/santz",
+    "description": "Framework para crear aplicaciones en PHP y TypeScript",
+    "type": "project",
+    "authors": [
+        {
+            "name": "chrisantiz",
+            "email": "kristyan1041@hotmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "app\\core\\":"app/core",
+            "app\\controllers\\":"app/controllers",
+            "app\\models\\":"app/models"
+        }
+    },
+    "require": {
+        "twig/twig": "^2.0"
+    },
+    "require-dev":{
+        "larapack/dd": "1.*"
+    }
+}
