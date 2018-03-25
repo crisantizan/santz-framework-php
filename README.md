@@ -17,7 +17,8 @@ Otras formas de <a href="https://nodejs.org/es/download/package-manager/" target
 >### Descarga e instalación del framework
 - Ubicarse en la carpeta de destino y clonar el proyecto con el siguiente comando:
 - <pre>$ git clone https://github.com/chrisantiz/santz</pre>
-> *Si no se tiene <a href="https://git-scm.com/" target="_blank">git</a> instalado, descargar el comprimido directamente.*
+ *Si no se tiene <a href="https://git-scm.com/" target="_blank">git</a> instalado, descargar el comprimido directamente.*
+ 
  ####Instalando dependencias
    Al instalar el framework se necesitará instalar las dependencias de desarrollo para su uso ideal:<br>
 - > Dependencias frontend
