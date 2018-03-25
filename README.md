@@ -1,4 +1,4 @@
-# Espectre/Miniframework
+# Santz/Framework
 Miniframework para desarrollo de aplicaciones en PHP y JS (TypeScript)<br><br>
  <i>Antes de proceder con la instalación del framework, es recomendable crear un virtualhost para trabajar con más comodidad, omitiendo configuraciones adicionales.</i> 
 <br><br>
@@ -16,9 +16,9 @@ Otras formas de <a href="https://nodejs.org/es/download/package-manager/" target
 
 >### Descarga e instalación del framework
 - Ubicarse en la carpeta de destino y clonar el proyecto con el siguiente comando:
-- <pre>$ git clone https://github.com/chrisantiz/Espectre_Miniframework</pre>
+- <pre>$ git clone https://github.com/chrisantiz/santz</pre>
 > *Si no se tiene <a href="https://git-scm.com/" target="_blank">git</a> instalado, descargar el comprimido directamente.*
-- #####Instalando dependencias<br>
+- ####Instalando dependencias<br>
     Al instalar el framework se necesitará instalar las dependencias de desarrollo para su uso ideal:
 - > Dependencias frontend
     ```bash
@@ -29,6 +29,7 @@ Otras formas de <a href="https://nodejs.org/es/download/package-manager/" target
     $ composer install
     ```
 - Ir al archivo principal "index.php", en la raíz del proyecto, y modificar la ruta base de la aplicación: <br>
+
     <pre>
     11  //Url base
     12  define('URL_BASE','http://tu_ruta_base.co/');</pre>
