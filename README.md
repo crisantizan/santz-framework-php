@@ -1,5 +1,5 @@
 # Santz/Framework
-Miniframework para desarrollo de aplicaciones en PHP y JS (TypeScript)<br><br>
+Miniframework para desarrollo de aplicaciones en PHP y TypeScript<br><br>
  <i>Antes de proceder con la instalación del framework, es recomendable crear un virtualhost para trabajar con más comodidad, omitiendo configuraciones adicionales.</i> 
 <br><br>
 >### Requerimientos mínimos <br>
@@ -18,8 +18,8 @@ Otras formas de <a href="https://nodejs.org/es/download/package-manager/" target
 - Ubicarse en la carpeta de destino y clonar el proyecto con el siguiente comando:
 - <pre>$ git clone https://github.com/chrisantiz/santz</pre>
 > *Si no se tiene <a href="https://git-scm.com/" target="_blank">git</a> instalado, descargar el comprimido directamente.*
-- ####Instalando dependencias<br>
-    Al instalar el framework se necesitará instalar las dependencias de desarrollo para su uso ideal:
+ ####Instalando dependencias
+   Al instalar el framework se necesitará instalar las dependencias de desarrollo para su uso ideal:<br>
 - > Dependencias frontend
     ```bash
     $ npm install
