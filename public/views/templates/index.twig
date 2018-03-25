@@ -6,10 +6,8 @@
             <input type="button" id="btnTest" value="Testear funcionamiento" class="btn btn-success">
         </div>
 
-        <div class="form-group">
-            <input type="text" class="form-control" id="email" placeholder="Email" >
-            <input type="hidden" class="form-control" id="token" value="{{ token }}">
-        </div>
+        {#Descomentar para recibir el token desde el servidor#}
+        {#<input type="hidden" id="token" value="{{ token }}">#}
 
     </div>
 {% endblock %}

@@ -1,10 +1,11 @@
 {
-  "name": "framework/santz",
+  "name": "framework-santz",
   "version": "1.0.0",
   "description": "Framework PHP y JS (TypeScript)",
   "main": "bundle.js",
   "scripts": {
-    "watch":"watchify ./public/typescript/output/src/main.js -o bundle.js"
+    "watch":"watchify ./public/typescript/output/src/main.js -o bundle.js",
+    "minify":"uglifyjs bundle.js -m -c -o bundle.min.js"
   },
   "repository": {
     "type": "git",

@@ -16,7 +16,8 @@ class MainController {
         View::create('index',[
             'title' => 'Bienvenido',
             'message' => 'Bienvenido a la página principal <santz/framework>',
-            'token' => helpers\Xtoken::create()
+            //Descomentar para crear un token
+            //'token' => helpers\Xtoken::create()
         ]);
     }
 }

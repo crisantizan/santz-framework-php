@@ -16,14 +16,10 @@ use app\core\helpers\Xtoken;
 class UserController extends UserModel {
 
     public function index(){
-        if (Session::get('entry')){
-            View::create('user.index',[
-                'title' => 'Página usuarios',
-                'message' => 'Bienvenido a la página usuarios'
-            ]);
-        }else{
-            redirect('/');
-        }
+        View::create('user.index',[
+            'title' => 'Página usuarios',
+            'message' => 'Bienvenido a la página usuarios'
+        ]);
     }
 
     public  function show () {
@@ -33,19 +29,4 @@ class UserController extends UserModel {
         ]);
     }
 
-    public function auth() {
-        if ($_POST) {
-            $input_token = input('token');
-            $res=['entry' => Xtoken::validate($input_token)];
-            Session::set('entry', Xtoken::validate($input_token));
-            //if (Xtoken::validate($input_token)) unset($_SESSION['token']);
-            echo json_encode($res);
-        }else{
-            redirect('/');
-        }
-    }
-
-    public function logout () {
-        Session::destroy()::redirect('/');
-    }
 }
