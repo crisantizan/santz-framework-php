@@ -2,6 +2,7 @@
     "name": "framework/santz",
     "description": "Framework para crear aplicaciones en PHP y TypeScript",
     "type": "project",
+    "version":"2.0.0",
     "authors": [
         {
             "name": "chrisantiz",
@@ -11,8 +12,7 @@
     "autoload":{
         "psr-4":{
             "app\\core\\":"app/core",
-            "app\\controllers\\":"app/controllers",
-            "app\\models\\":"app/models"
+            "app\\controllers\\":"app/controllers"
         }
     },
     "require": {

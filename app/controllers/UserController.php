@@ -8,12 +8,11 @@
 
 declare(strict_types = 1);
 namespace app\controllers;
-use app\core\librarys\Session;
-use app\core\librarys\View;
-use app\models\User as UserModel;
+use app\core\libs\Session;
+use app\core\libs\View;
 use app\core\helpers\Xtoken;
 
-class UserController extends UserModel {
+class UserController {
 
     public function index(){
         View::create('user.index',[

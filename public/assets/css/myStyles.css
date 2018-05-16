@@ -1,0 +1,176 @@
+/* Uploader de imágenes */
+.change-image{
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+}
+.change-image .preview{
+    width: 100%;
+    margin: 0 auto 10px auto;
+    position: relative;
+}
+.change-image .preview > img {
+    width: 100%;
+}
+.change-image .preview > a#file-select {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    display: none;
+}
+.change-image .preview > a#file-quit {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    width: 15%;
+    text-align: center;
+    background: #1b1e21;
+    color: #FFF;
+    border-radius: 5px;
+    display: none;
+}
+.change-image .file-info{
+    display: block;
+}
+.change-image input[type=file]{
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    z-index: -9999;
+}
+.change-image .input-save{
+    width: 100%;
+}
+/* Mensajes de información sobre el archivo subido */
+.info-success, .info-error {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin:10px 0 !important;
+}
+/* Fuente a mostrar */
+.fig-font {
+    line-height: 2.5rem;
+    padding: 0 .4rem;
+    font-weight: bold;
+    -webkit-text-fill-color: white;
+    /*-webkit-text-stroke: #fff;*/
+    -webkit-text-stroke-width: .04rem;
+}
+.info-success {
+    background: palegreen;
+}
+.info-success > p{
+    margin: 0;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+}
+.info-error {
+    background: rgba(255, 47, 86, 0.78);
+}
+.info-error > p{
+    margin: 0;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+}
+/* Diferentes tamaños para los el uploader y formulario */
+.card-image {
+    margin: 1.5rem auto auto auto !important;
+}
+@media (min-width: 400px) {
+    .card-image {
+        width: 18rem;
+        display: flex;
+
+    }
+}
+@media (min-width:401px) and (max-width: 991px) {
+    .form-admin {
+        width: 80% !important;
+        margin: auto;
+    }
+}
+/* Cargador que se mostrará al realizar una petición AJAX */
+.loader{
+    z-index: 1000;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/* Corregir posicionamiento de la barra superior */
+.page-info {
+    margin-top:4rem;
+}
+@media(max-width:768px) {
+    .page-info {
+        margin-top: 0 !important;
+    }
+}
+/*
+    (min-width) de 100px en adelante
+    (max-width) hasta un máximo de 100px
+*/
+/* Animación label sobre inputs */
+.form-input:focus + .form-label{
+    margin-top: -90px;
+    background: transparent;
+}
+.form-select:focus + .form-label {
+    margin-top: -90px;
+    background: transparent;
+}
+.form-input, .form-select {
+    margin-bottom: 1rem !important;
+    /*background: rgba(0,0,0,0.02);*/
+    border: 1px solid rgba(0,0,0,0.2);
+}
+.form-select {
+    height: 2.85rem !important;
+}
+.form-label {
+    margin-left: 10px;
+    position: absolute;
+    margin-top: -50px;
+    background: #fff;
+    width: 80%;
+    /*z-index: -20;*/
+    /*color: rgba(0,0,0,0.4);*/
+    transition: all 0.2s;
+}
+.go-up{
+    margin-top: -90px;
+    background: transparent;
+}
+.form-admin {
+    margin-top:1.5rem;
+}
+.form-admin .form-input, .input-label{
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+}
+/* Estilos de la alerta swal */
+@media(max-width:768px) {
+    .swal-modal{
+        max-width: 80%;
+    }
+    .swal-title {
+        font-size: 1.2rem;
+    }
+    .swal-text {
+        font-size: .8rem;
+    }
+}

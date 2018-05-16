@@ -11,13 +11,11 @@
  * Por defecto las consultas retornarán la información en objectos
  * Cambiar el atributo ATTR_DEFAULT_FETCH_MODE FETCH_ASSOC o FETCH_BOTH para obtener arrays
  */
-
-return [
-    'db_host'=>'127.0.0.1',
-    'db_name'=>'',
-    'db_user'=>'root',
-    'db_pass'=>'',
-    'db_charset'=>'utf8',
-    'db_options'=>
-        [\PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_OBJ]
-];
+return new class {
+    public static $host       = '127.0.0.1';
+    public static $name       = 'escuela';
+    public static $user       = 'root';
+    public static $pass       = '';
+    public static $charset    = 'utf8';
+    public static $options    =  [\PDO::ATTR_DEFAULT_FETCH_MODE=>\PDO::FETCH_OBJ];
+};

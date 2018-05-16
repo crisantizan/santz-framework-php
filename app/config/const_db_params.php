@@ -6,11 +6,9 @@
  * Time: 09:03 PM
  */
 
-// Se pasa como parámetro al método "save" para indicarle que va a continuar con otro
-define('METHOD_CONTINUE',true);
 // Para agregar un nuevo registro a base de datos (INSERT)
-define('DB_INSERT',0);
+define('INSERT',0);
 // Actualizar datos (UPDATE)
-define('DB_UPDATE',1);
+define('UPDATE',1);
 // Ejecutar la consulta
-define('EXEC',true);
+define('JOIN_TYPE',true);

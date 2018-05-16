@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {#-----------Estilos-----------#}
+    <link rel="stylesheet" href="{{ assets('css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ assets('css/fonts/font-awesome/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ assets('css/style.css') }}">
+    <title>{{ title | default('Title default') }}</title>
+</head>
+<body>
+
+{#----------Contenido principal----------#}
+{% block content %} {% endblock %}
+{#----------Scripts----------#}
+<script src="{{ assets('js/jquery/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ assets('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ URL_BASE }}bundle.js"></script>
+{#Descomentar cuando el archivo minimizado sea creado, comentar bundle.js#}
+{#<script src="{{ URL_BASE }}bundle.min.js"></script>#}
+</body>
+</html>

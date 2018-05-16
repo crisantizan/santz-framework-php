@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ assets('images/favicon.png') }}">
+    <title>Ela - Bootstrap Admin Dashboard Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ assets('css/bootstrap/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ assets('css/style.css') }}" rel="stylesheet">
+</head>
+<body class="fix-header fix-sidebar">
+{% block content %} {% endblock %}
+<!-- All Jquery -->
+<script src="{{ assets('js/jquery/jquery-3.3.1.min.js') }}"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="{{ assets('js/bootstrap/bootstrap.bundle.min.js') }}"></script>
+</body>

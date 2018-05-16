@@ -17,9 +17,9 @@ for (let i in tempPath) {
     if (cont > 1) break;
 }
 // La posición 0 será el controlador. Si viene vacía o indefinida por defecto será "main"
-controller = (route[0] == '' || route[0] == undefined) ? 'main' : route[0].toLowerCase();
+controller = (route[0] == '' || route[0] == 'index' || route[0] == undefined) ? 'main' : route[0].toLowerCase();
 // La posición 1 será el método. Si está vació o indefinido por defecto será "index"
 method = (route[1] == '' || route[1] == undefined) ?  'index' : route[1].toLowerCase() ;
 // Mandamos a evaluar los datos recogidos y si son correctos nos carga lo solicitado
 classAutoload(controller, method);
-//console.log(`Controller: ${controller}`); console.log(`Method: ${method}`);
+// console.log(`Controller: ${controller}`); console.log(`Method: ${method}`);

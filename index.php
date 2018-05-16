@@ -7,8 +7,10 @@
  */
 
 // Path base de aplicación
-define('BASE_PATH',dirname(realpath(__FILE__)).'/');
-// Escribir aquí la ruta base de tu aplicación
-define('URL_BASE','http://santz.co/');
+define('BASE_PATH', dirname( realpath(__FILE__) ).'/');
+// Escribir aquí los componentes de la ruta de tu aplicación (sin /)
+define('PROTOCOL','http');
+define('HOSTNAME','santz.co');
+define('URL_BASE', PROTOCOL.'://'.HOSTNAME.'/');
 // Se encarga de incluir los archivos de toda la aplicación
-require_once('app/core/librarys/core.php');
+require_once('app/core/core.php');

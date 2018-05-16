@@ -6,8 +6,10 @@
  * Time: 11:21 PM
  */
 
-use app\core\librarys\Route;
-Route::setControllers(array(
-    '/'=>'MainController',
-    '/user'=> 'UserController',
-));
+use app\core\libs\Route;
+// Añdir la ruta y el controlador que la procesará
+Route::setRoutes([
+    '/'         => 'MainController',
+    '/index'    => 'MainController',
+    '/user'     => 'UserController',
+]);

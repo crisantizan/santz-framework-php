@@ -7,10 +7,10 @@
  */
 
 namespace app\core\helpers;
-use app\core\librarys\Session;
+use app\core\libs\Session;
 
 class Xtoken {
-    public static function create () {
+    public static function create ():string {
         $token = '';
         $token =  md5(uniqid(mt_rand(),true));
         Session::set('token',$token);

@@ -1,4 +1,4 @@
-// Clase que debe ser usada por cualquier controlador creado,
+// Clase que debe ser usada por todos los controladores,
 // permite llamar un método específico cuando este existe
 export class MethodValidate {
     public methodExist (method:string) {

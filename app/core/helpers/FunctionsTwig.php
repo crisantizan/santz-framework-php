@@ -14,14 +14,18 @@ final class FunctionsTwig extends \Twig_Extension {
     final public static function assets (string $path) {
         echo URL_BASE."public/assets/{$path}";
     }
+    // Cargar archivos desde la raíz del proyecto (Ej: bundle.js) desde cualquier ruta
+    final public static function home (string $file): void {
+        echo URL_BASE."{$file}";
+    }
     //Convertiremos el método en una función ejecutable por Twig
     public function getFunctions() : array {
         return array(
-            new \Twig_Function('assets',array($this,'assets'))
+            new \Twig_Function('assets',    array($this,'assets')),
+            new \Twig_Function('home',      array($this,'home'))
         );
     }
-
     public function getName() : string {
-        return 'Espectre_Func_Twig';
+        return 'Santz_Func_Twig';
     }
 }

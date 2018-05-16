@@ -1,4 +1,4 @@
-(function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var MainController_1 = require("./controllers/MainController");
@@ -26,15 +26,11 @@ var MainController = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     MainController.prototype.index = function () {
-        var _this = this;
         var msg = 'Hello world from MainController';
         console.log(msg);
-        $('#btnTest').on('click', function () {
-            _this.message(msg);
+        document.querySelector('#btnTest').addEventListener('click', function () {
+            alert(msg);
         });
-    };
-    MainController.prototype.message = function (msg) {
-        alert(msg);
     };
     return MainController;
 }(MethodValidate_1.MethodValidate));
@@ -99,6 +95,46 @@ var classAutoload = function (controller, method) {
         return eval("Controller." + controller + "()." + method + "()");
 };
 exports.classAutoload = classAutoload;
+var anyIsEmpty = function () {
+    var inputs = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        inputs[_i] = arguments[_i];
+    }
+    for (var input in inputs) {
+        if (inputs[input] === '')
+            return true;
+    }
+    return false;
+};
+exports.anyIsEmpty = anyIsEmpty;
+var assets = function (patch) {
+    return window.location.origin + "/public/assets/" + patch;
+};
+exports.assets = assets;
+var mountLoaderHTML = function (htmlElement) {
+    var loader = "\n        <div class=\"loader d-none\">\n            <svg class=\"circular\" viewBox=\"25 25 50 50\">\n                <circle class=\"path\" cx=\"50\" cy=\"50\" r=\"20\" fill=\"none\" stroke-width=\"4\" stroke-miterlimit=\"10\" /> </svg>\n        </div>\n    ";
+    document.querySelector(htmlElement).innerHTML = loader;
+};
+exports.mountLoaderHTML = mountLoaderHTML;
+var toggleLoader = function () {
+    $('.loader').toggleClass('d-block');
+};
+exports.toggleLoader = toggleLoader;
+var __ = function (element) {
+    return document.querySelector(element);
+};
+exports.__ = __;
+var __e = function (element) {
+    return document.querySelector(element);
+};
+exports.__e = __e;
+var convert = function (size) {
+    if (size < 1000000)
+        return (size / 1000).toFixed(1) + " KB";
+    else
+        return (size / 1000000).toFixed(1) + " MB";
+};
+exports.convert = convert;
 
 },{"../Controllers":1}],6:[function(require,module,exports){
 "use strict";
@@ -117,7 +153,7 @@ for (var i in tempPath) {
     if (cont > 1)
         break;
 }
-controller = (route[0] == '' || route[0] == undefined) ? 'main' : route[0].toLowerCase();
+controller = (route[0] == '' || route[0] == 'index' || route[0] == undefined) ? 'main' : route[0].toLowerCase();
 method = (route[1] == '' || route[1] == undefined) ? 'index' : route[1].toLowerCase();
 helpers_1.classAutoload(controller, method);
 
